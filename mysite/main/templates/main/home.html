@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link href="{%static 'tinymce/css/prism.css'%}" rel="stylesheet">
+	<script src="{%static 'tinymce/js/prism.js'%}"></script>
+	<title>Home</title>
+	}
+</head>
+<body>
+{%for tut in tutorials%}
+	<p>{{tut.tutorial_title}}</p>
+	<p>{{tut.tutorial_published}}</p>
+	<p>{{tut.tutorial_content|safe}}</p>
+	<br><br>
+
+
+{% endfor %}
+
+</body>
+
+</html>

@@ -13,6 +13,7 @@ class TutorialAdmin(admin.ModelAdmin):
 	fields = ["tutorial_published","tutorial_title","tutorial_content",]
 	## changing the order of the fields.
 '''
+
 ## we can cluster similar fields together
 class TutorialAdmin(admin.ModelAdmin):
 
