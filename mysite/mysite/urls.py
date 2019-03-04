@@ -20,5 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('main.urls')),
     path('tinymce',include('tinymce.urls')),
-    path('register/',include("main.urls"))
+    path('register/',include("main.urls")),
+    path('logout/',include("main.urls")),
+    path('login/',include("main.urls")),
 ]
