@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tutorial
+from .models import Tutorial,TutorialCategory,TutorialSeries
 from tinymce.widgets import TinyMCE ## import TinyMCE for textfield
 from django.db import models  ## import models to modify textField.
 
@@ -19,7 +19,10 @@ class TutorialAdmin(admin.ModelAdmin):
 
 	fieldsets= [
 		("Title/date",{"fields":["tutorial_title","tutorial_published"]}),
+		("URL", {"fields":["tutorial_slug"]}),
+		("Series", {"fields":["tutorial_series"]}),
 		("Content", {"fields":["tutorial_content"]}),
+
 	]
 
 	## modifying the textfield so have nice editor in it.
@@ -29,6 +32,8 @@ class TutorialAdmin(admin.ModelAdmin):
 	}
 
 # Register your models here.
+admin.site.register(TutorialCategory)
+admin.site.register(TutorialSeries)
 admin.site.register(Tutorial,TutorialAdmin)
 
 
