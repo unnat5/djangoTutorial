@@ -1,0 +1,24 @@
+{%extends "main/header.html"%}
+
+{%block content%}
+  <div class="row">
+  	{%for tut, partone in part_ones.items%}
+  		<!-- <div class="container"> -->
+	    <div class="col s12 m6">
+	    <a href = "{{partone}}", style="color:#000">
+	      <div class="card hoverable">
+	        <div class="card-content Black-text">
+	          <div class="card-title">{{tut.tutorial_series}}</div>
+				<p>{{tut.series_summary}}</p>
+	        </div>
+<!-- 	        <div class="card-action">
+	          <a href="#">This is a link</a>
+	          <a href="#">This is a link</a>
+	        </div> -->
+	      </div>
+	      </a>
+	    </div>
+	{% endfor %}
+	</div>
+  <!-- </div>	 -->
+{% endblock %}
